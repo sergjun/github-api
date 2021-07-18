@@ -1,26 +1,22 @@
 import "./index.css"
-import {useEffect, useState} from 'react'
 
-function CreateMainUser () {
 
-    const [data, setData] = useState("");
-    useEffect(() => {
-      fetch("https://api.github.com/users/sergjun")
-        .then(response => response.json())
-        .then(repos => setData(repos))
-        
-    }, []);
-    console.log(data)
+function CreateMainUser (props) {
+
+    const {data} = props 
+
+
+    
     return (
       <div className ="MainUser" >
         <h2>
-        <p>{data.login}</p>
+        {data?.login ? <p>{data.login}</p> : <p>Nenhum usuário</p>}
           
         </h2>
         <p>{data.name}</p>
         
         
-        <img src={data.avatar_url} alt="user avatar"></img>
+        {data?.avatar_url ? <img src={data.avatar_url} alt="user avatar"></img> : ""}
         <p>{data.repos_url}</p>
          
         

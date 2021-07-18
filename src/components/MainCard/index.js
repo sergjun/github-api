@@ -1,11 +1,15 @@
 import { CreateMainUser } from "../MainUser"
 import "./index.css"
 
-function CreateMainCard () {
+function CreateMainCard (props) {
+
+    const {data} = props 
+
+
 
     return (
         <div className="MainCard">
-        <CreateMainUser/>
+        <CreateMainUser data={data}/>
         </div>
     ) 
 
