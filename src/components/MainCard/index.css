@@ -1,0 +1,9 @@
+.MainCard {
+    width: 25vw;
+    height: auto;
+    margin: 30px auto ;
+    background-color: rgba(115, 109, 109, 0.5);
+    border-radius: 5px;
+    border-right: #5e6a8e 5px solid;
+    
+}

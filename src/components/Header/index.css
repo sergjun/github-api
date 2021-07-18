@@ -1,0 +1,25 @@
+.Titulo
+{
+    color: white;
+    vertical-align: middle;
+    text-align: center;
+    font-size: clamp(1rem, 1.9vw, 2.1rem);
+    font-weight: bold;
+    
+    
+    
+}
+
+.Container
+{
+    background-color: rgba(0, 0, 0, 0.356);
+    border-radius: 3.125rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    padding: 1.25rem;
+    width: 20vw;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+
+}
