@@ -1,28 +1,35 @@
 import "./index.css"
 
+// function CreateList () {
+//   console.log("lista criada")
+// }
+
+
 
 function CreateMainUser (props) {
 
     const {data} = props 
+    const repositorioApi = data.repos_url
 
-
+    console.log(repositorioApi)
     
     return (
+      
       <div className ="MainUser" >
-        <h2>
-        {data?.login ? <p>{data.login}</p> : <p>Nenhum usuário</p>}
-          
-        </h2>
-        <p>{data.name}</p>
+      
+      {data?.login ? <h2>{data.login}</h2> : ""}
+      <h3>{data.name}</h3>
+     
+      
+      
+      {data?.login ? <img src={data.avatar_url} alt="user avatar"></img> : ""}
+      {data?.login ? <button> Mostrar respositorios </button> : ""}
+      <p>{data.repos_url}</p>
+       
+      
+             
         
-        
-        {data?.avatar_url ? <img src={data.avatar_url} alt="user avatar"></img> : ""}
-        <p>{data.repos_url}</p>
-         
-        
-               
-          
-      </div>
+    </div>
     );
 
 }
