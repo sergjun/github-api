@@ -17,20 +17,21 @@ function CreateMainUser (props) {
     return (
       
       <div className ="MainUser" >
-      
-      {data?.login ? <h2>{data.login}</h2> : ""}
-      <h3>{data.name}</h3>
+      <div className="MainName">
+      {data?.login ? <h2>{data.name}</h2> : ""}
+      <h3>{data.bio}</h3>
      
       
       
       {data?.login ? <img src={data.avatar_url} alt="user avatar"></img> : ""}
+      </div>
 
       {repos.map((repo, i) => {
         return (
-          <>
+          <div className="MainRepo">
             <h4>{repo.name}</h4>
             <p>{repo.description}</p>
-          </>
+          </div>
         )
       })}
 

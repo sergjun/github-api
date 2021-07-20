@@ -1,24 +1,12 @@
 .MainUser{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
+    height: auto;
     justify-content: center;
-    width: auto;
-}
-
-
-
-h2 {
-    font-size: 2rem;
-    color: white;
-    text-decoration-line: underline;
-    text-decoration-style: double;
+    flex-wrap: wrap;
     
 }
 
-h3 {
-    font-style: oblique;
-}
 
 img {
 
@@ -28,4 +16,29 @@ img {
     border-radius: 50%;
     border: white solid 5px;
     margin-bottom: 2rem;
+}
+
+
+.MainRepo {
+    
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+    background-color: rgba(99, 147, 236, 0.2);
+    border-radius: 3.125rem;
+
+}
+
+
+.MainName
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    align-content: center;
+    align-items: center;
 }
