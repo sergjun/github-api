@@ -1,6 +1,6 @@
 .MainCard {
     width: 25vw;
-    height: 60vh;
+    height: auto;
     margin: 30px auto ;
     background-color: rgba(115, 109, 109, 0.5);
     border-radius: 5px;

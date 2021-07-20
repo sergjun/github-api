@@ -8,10 +8,11 @@ import "./index.css"
 
 function CreateMainUser (props) {
 
-    const {data} = props 
-    const repositorioApi = data.repos_url
+    const {data, repos} = props 
 
-    console.log(repositorioApi)
+
+    console.log(repos)
+
     
     return (
       
@@ -23,8 +24,17 @@ function CreateMainUser (props) {
       
       
       {data?.login ? <img src={data.avatar_url} alt="user avatar"></img> : ""}
-      {data?.login ? <button> Mostrar respositorios </button> : ""}
-      <p>{data.repos_url}</p>
+
+      {repos.map((repo, i) => {
+        return (
+          <>
+            <h4>{repo.name}</h4>
+            <p>{repo.description}</p>
+          </>
+        )
+      })}
+
+
        
       
              

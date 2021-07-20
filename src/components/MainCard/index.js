@@ -3,13 +3,15 @@ import "./index.css"
 
 function CreateMainCard (props) {
 
-    const {data} = props 
+    const {data, repos} = props 
+    
 
 
+        
 
     return (
         <div className="MainCard">
-        <CreateMainUser data={data}/>
+        <CreateMainUser data={data} repos={repos}/>
         </div>
     ) 
 

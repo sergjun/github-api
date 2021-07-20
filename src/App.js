@@ -13,6 +13,7 @@ function App() {
   
   const [search, setSearch] = useState("")
   const [data, setData] = useState("");
+  const [repositorys, setRepositorys] = useState([])
   
   
   useEffect(() => {
@@ -23,17 +24,33 @@ function App() {
       .then(repos => setData(repos))
     }
   }, [search]);
+
+  useEffect( () => {
+    if (search.length !== 0) {
+      fetch(`https://api.github.com/users/${search}/repos`)
+      .then(response => response.json())
+      .then(repos => setRepositorys(repos))
+      
+    }
+    
+  }, [search]);
+
+  
+
+    
+
   
   
 
-  console.log(search)
+  
   
   return (
     <>
       <Header/>
       <SearchBar setSearch={setSearch}/>
-      <CreateMainCard data={data}/>
+      <CreateMainCard data={data} repos={repositorys}/>
       <CreateFooter/> 
+      
   
     </>  
   
